@@ -35,6 +35,10 @@ func main() {
 
 	for update := range updates {
 
+		if update.CallbackQuery == nil {
+			continue
+		}
+
 		fmt.Println("kek")
 		// chID := update.CallbackQuery.ChatInstance
 		// chID := update.CallbackQuery.From.ID
