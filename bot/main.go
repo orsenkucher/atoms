@@ -36,6 +36,16 @@ func main() {
 	for update := range updates {
 
 		if update.CallbackQuery == nil {
+			msg := tgbotapi.NewMessage(conv, "Yo! Life!")
+			fmt.Println("kek3")
+			msg.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
+				tgbotapi.NewInlineKeyboardRow(
+					tgbotapi.NewInlineKeyboardButtonURL("live game", "https://crystal-factory.web.app/#/"),
+				),
+			)
+			fmt.Println("kek4")
+
+			bot.Send(msg)
 			continue
 		}
 
