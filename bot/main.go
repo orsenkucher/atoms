@@ -36,16 +36,19 @@ func main() {
 	for update := range updates {
 
 		if update.CallbackQuery == nil {
-			msg := tgbotapi.NewMessage(conv, "Yo! Life!")
-			fmt.Println("kek3")
-			msg.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
-				tgbotapi.NewInlineKeyboardRow(
-					tgbotapi.NewInlineKeyboardButtonURL("live game", "https://crystal-factory.web.app/#/"),
-				),
-			)
-			fmt.Println("kek4")
-
-			bot.Send(msg)
+			if update.Message != nil {
+				chID := update.Message.Chat.ID
+				// conv, err := strconv.ParseInt(strconv.Itoa(chID), 10, 64)
+				msg := tgbotapi.NewMessage(chID, "Yo! Life!")
+				fmt.Println("kek3")
+				msg.ReplyMarkup = tgbotapi.NewInlineKeyboardMarkup(
+					tgbotapi.NewInlineKeyboardRow(
+						tgbotapi.NewInlineKeyboardButtonURL("live game", "https://crystal-factory.web.app/#/"),
+					),
+				)
+				fmt.Println("kek4")
+				bot.Send(msg)
+			}
 			continue
 		}
 
