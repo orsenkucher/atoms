@@ -2,13 +2,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <script src="wasm_exec.js"></script>
-    <script>
-        const go = new Go();
-        WebAssembly.instantiateStreaming(fetch("life.wasm"), go.importObject).then((result) => {
-            go.run(result.instance);
-        });
-    </script>
+    <script src="main.js"></script>
+    <script src="main.js.map"></script>
 </head>
 
 <body></body>

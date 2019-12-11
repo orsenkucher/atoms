@@ -4,7 +4,7 @@ go 1.12
 
 require (
 	github.com/go-telegram-bot-api/telegram-bot-api v4.6.4+incompatible
-	github.com/gopherjs/gopherjs v0.0.0-20190915194858-d3ddacdb130f // indirect
+	github.com/gopherjs/gopherjs v0.0.0-20191106031601-ce3c9ade29de // indirect
 	github.com/hajimehoshi/ebiten v1.9.3
 	github.com/hajimehoshi/wasmserve v0.0.0-20190923141630-74336f2566c1 // indirect
 	github.com/kisielk/gotool v1.0.0 // indirect
