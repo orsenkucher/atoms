@@ -7,5 +7,5 @@ require (
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
 	github.com/hajimehoshi/ebiten v1.10.1
 	github.com/technoweenie/multipartstreamer v1.0.1 // indirect
-	golang.org/x/image v0.0.0-20191206065243-da761ea9ff43
+	golang.org/x/image v0.5.0
 )
